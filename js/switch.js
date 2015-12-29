@@ -2,28 +2,24 @@ var BulbState = ["img/loff.jpg", "img/lon.jpg"];
 var SwitchState = ["img/soff.png", "img/son.png"];
 var Bulbs = [0, 0, 0];
 var Switches = [0, 0, 0];
+var Bulb;
+var Switch;
 
 function playWithBulbs(x) {
 		
 	if (x == 1) {
-		var Bulb = document.getElementById('b1');
-		var Switch = document.getElementById('s1');
-		Bulbs[1] = 1 - Bulbs[1];
-		Switches[1] = 1 - Switches[1];
+		Bulb = document.getElementById('b1');
+		Switch = document.getElementById('s1');
+		switchBulb(1);
 
-		Bulb.src = BulbState[Bulbs[1]];
-		Switch.src = SwitchState[Switches[1]];
 	} else if (x == 2) {
-		var Bulb = document.getElementById('b2');
-		var Switch = document.getElementById('s2');
-		Bulbs[2] = 1 - Bulbs[2];
-		Switches[2] = 1 - Switches[2];
+		Bulb = document.getElementById('b2');
+		Switch = document.getElementById('s2');
+		switchBulb(2);
 
-		Bulb.src = BulbState[Bulbs[2]];
-		Switch.src = SwitchState[Switches[2]];
 	} else if (x == 0) {
-		var Bulb = document.getElementsByClassName('bulb');
-		var Switch = document.getElementsByClassName('switch');
+		Bulb = document.getElementsByClassName('bulb');
+		Switch = document.getElementsByClassName('switch');
 		
 		Bulbs[0] = 1 - Bulbs[0];
 		Switches[0] = 1 - Switches[0];
@@ -39,4 +35,12 @@ function playWithBulbs(x) {
 		}
 	}
 
+}
+
+function switchBulb(x) {
+	Bulbs[x] = 1 - Bulbs[x];
+	Switches[x] = 1 - Switches[x];
+
+	Bulb.src = BulbState[Bulbs[x]];
+	Switch.src = SwitchState[Switches[x]];
 }
