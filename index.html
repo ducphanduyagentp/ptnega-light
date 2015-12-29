@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light 'em up</title>
+</head>
+<body>
+    <center>
+        <div>
+            <img src="img/window.jpg" width="20%" height="20%" />
+            <img class="bulb" id="b1" src="img/loff.jpg"/>
+            <img class="bulb" id="b2" src="img/loff.jpg"/>
+            <img src="img/window.jpg" width="20%" height="20%" />
+        </div>
+        <div>
+            <img class="switch" id="s1" src="img/soff.png" onclick="playWithBulbs(1)" />
+            <img class="switch" id="s2" src="img/soff.png" onclick="playWithBulbs(2)" />
+        </div>
+        <br><br><br>
+        <img class="switch" src="img/soff.png" onclick="playWithBulbs(0)" />
+        <p>Master Switch</p>
+    </center>
+    <script src="js/switch.js"></script>
+</body>
+</html>
